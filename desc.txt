@@ -32,3 +32,35 @@ aby uruchomić drugą wersję testu, należy dodać do pliku pom.xml:
 </dependency>
 
 mvn test
+
+dodanie SpittleController
+zupdateowałem maven-compiler-plugin do version 3.1, widać problemy jakie występują przy komilacji
+
+brak w SpittleController
+import org.springframework.ui.Model;
+
+brak w Spittle
+import org.apache.commons.lang.builder.equalsbuilder
+
+brak importów w klasie testu:
+import static org.mockito.Mockito.*;
+import org.junit.Test;
+import org.springframework.test.web.servlet.MockMvc;
+import spittr.web.HomeController;
+import spittr.Spittle;
+import spittr.data.SpittleRepository;
+
+
+import org.springframework.web.servlet.view.InternalResourceView;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Date;
+import java.lang.Class;
+
+<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-all</artifactId>
+    <version>1.9.5</version>
+</dependency>
+
