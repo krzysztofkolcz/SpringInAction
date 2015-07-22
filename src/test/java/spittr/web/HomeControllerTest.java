@@ -39,8 +39,7 @@ public class HomeControllerTest {
         SpittleRepository mockRepository = mock(SpittleRepository.class);
         when(mockRepository.findSpittles(Long.MAX_VALUE, 20)).thenReturn(expectedSpittles);
         SpittleController controller = new SpittleController(mockRepository);
-        MockMvc mockMvc = standaloneSetup(controller).setSingleView(
-        new InternalResourceView("/WEB-INF/views/spittles.jsp")).build();
+        MockMvc mockMvc = standaloneSetup(controller).setSingleView(new InternalResourceView("/WEB-INF/views/spittles.jsp")).build();
         mockMvc.perform(get("/spittles"))
         .andExpect(view().name("spittles"))
         .andExpect(model().attributeExists("spittleList"))
