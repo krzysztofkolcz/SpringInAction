@@ -14,7 +14,9 @@ import org.junit.runner.RunWith;
 import spittr.web.HomeController;
 import spittr.web.SpittleController;
 import spittr.data.SpittleRepository;
+import spittr.data.SpitterRepository;
 import spittr.Spittle;
+import spittr.Spitter;
 
 import org.springframework.web.servlet.view.InternalResourceView;
 
@@ -91,5 +93,30 @@ public class HomeControllerTest {
             spittles.add(new Spittle("Spittle " + i, new Date()));
         }
         return spittles;
+    }
+
+    @Test
+    public void shouldShowRegistration() throws Exception {
+        SpitterRepository mockRepository = mock(SpitterRepository.class);
+        SpitterController controller = new SpitterController(mockRepository);
+        MockMvc mockMvc = standaloneSetup(controller).build();
+        mockMvc.perform(get("/spitter/register")).andExpect(view().name("registerForm"));
+    }
+
+    @Test
+    public void shouldProcessRegistration() throws Exception {
+        SpitterRepository mockRepository = mock(SpitterRepository.class);
+        Spitter unsaved = new Spitter("jbauer", "24hours", "Jack", "Bauer");
+        Spitter saved = new Spitter(24L, "jbauer", "24hours", "Jack", "Bauer");
+        when(mockRepository.save(unsaved)).thenReturn(saved);
+        SpitterController controller = new SpitterController(mockRepository);
+        MockMvc mockMvc = standaloneSetup(controller).build();
+        mockMvc.perform(post("/spitter/register")
+        .param("firstName", "Jack")
+        .param("lastName", "Bauer")
+        .param("username", "jbauer")
+        .param("password", "24hours"))
+        .andExpect(redirectedUrl("/spitter/jbauer"));
+        verify(mockRepository, atLeastOnce()).save(unsaved);
     }
 }
