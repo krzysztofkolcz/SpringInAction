@@ -48,7 +48,7 @@ public class SpitterController {
             }
             return "registerForm";
         }
-        spitter =  spitterRepository.save(spitter);
+        spitterRepository.save(spitter);
         System.out.println("redirect:/spitter/" + spitter.getUsername());
         return "redirect:/spitter/" + spitter.getUsername();
     }
