@@ -68,3 +68,7 @@ import java.lang.Class;
 przenoszę
 mv  main/java/spittr/config/ config/spittr/
 
+
+Test shouldProcessRegistrationForm nie przechodził, ponieważ albo nie było path w form:input,
+albo nie było getterów i setterów w klasie spitter.
+Front nie działał, ponieważ nie było implementacji interfaceu SpitterRepository
