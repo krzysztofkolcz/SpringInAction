@@ -2,3 +2,4 @@
 *.swp
 
 target/**
+chapter02/javaconfig/target/**
