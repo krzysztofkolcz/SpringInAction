@@ -1,0 +1,61 @@
+Spring In Action, rozdział 2, strona 60
+
+mvn archetype:generate -DgroupId=pl.kkolcz.common -DartifactId=SpringExamples -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+kompilacja:
+mvn package
+Konieczne dodanie w pom.xml wersji javy?:
+http://stackoverflow.com/questions/6315781/maven-error-annotations-are-not-supported
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>2.3.2</version>
+            <configuration>
+                <source>1.5</source>
+                <target>1.5</target>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
+
+
+Jak uruchomić aplikację springa z command line?
+Zacząłem czytać o spring-boot:
+https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html#getting-started-installing-the-cli
+https://docs.spring.io/spring-boot/docs/current/reference/html/cli-using-the-cli.html
+
+Jest też plugin maven:
+http://docs.spring.io/spring-boot/docs/current/maven-plugin/usage.html
+
+Jak zrobić paczkę jar?
+
+
+Zacząłem czytać:
+http://spring.io/blog/2011/01/17/green-beans-getting-started-with-maven-and-spring/
+https://spring.io/blog/2010/11/30/maven-configuration-for-spring-integration
+
+wystarczy:
+mvn clean install
+
+Problemy:
+-nie chciał pobrać bibliotek.
+Pomogła zmiana
+    <artifactId>spring</artifactId>
+na:
+    <artifactId>spring-core</artifactId>
+
+pomogło dodanie kolejnych dependencies.
+zmiana na roota i spowrotem na usera (jakiś problem z uprawnieniami do .m2?)
+
+mvn test
+wszystko działa
+
+java -jar target/Soundsystem-1.0-SNAPSHOT.jar 
+no main manifest attribute, in target/Soundsystem-1.0-SNAPSHOT.jar
+
+Muszę spróbować 
+https://spring.io/guides/gs/maven/
+i zdefiniować klasę z metodą main
