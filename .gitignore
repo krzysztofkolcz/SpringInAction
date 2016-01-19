@@ -1,5 +1,6 @@
 #vim
 *.swp
-
+*.idea
+*.iml
 target/**
 chapter02/javaconfig/target/**
