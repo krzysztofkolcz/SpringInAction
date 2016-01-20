@@ -1,0 +1,33 @@
+wygenerowanie struktury projektu z archetype mavena:
+http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
+mvn archetype:generate -DgroupId=spitter -DartifactId=spitt -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+Utworzyło takie coś:
+├── desc.txt
+└── spitt
+    ├── pom.xml
+    └── src
+        └── main
+            ├── resources
+            └── webapp
+                ├── index.jsp
+                └── WEB-INF
+                    └── web.xml
+
+Brakuje chyba spitt/src/main/java/spittr
+mkdir -p spitt/src/main/java/spittr
+
+Brakuje spitt/src/test
+mkdir -p spitt/src/test
+
+kopiuję sobie pom.xml ze SpringInAction chapter02/javaconfig
+pom.xml robię na podstawie:
+chapter02/javaconfig/pom.xml, 
+    sekcja <properties>
+chapter05/pom.xml, oraz 
+    sekcja <dependencies>
+http://websystique.com/springmvc/spring-4-mvc-and-hibernate4-integration-example-using-annotations/
+    sekcja <build>
+
+
+
