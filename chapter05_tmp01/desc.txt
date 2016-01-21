@@ -33,3 +33,8 @@ http://websystique.com/springmvc/spring-4-mvc-and-hibernate4-integration-example
 mvn test
 error: annotations are not supported in -source 1.3
 muszę dodać do pom.xml plugin maven-compile-plugin z wersją javy 1.8
+
+mvn test
+error: package spittr.data does not exist
+Za dużo skopiowałem z chapter05, usunięcie importów z nieistniejącymi jeszcze pakietami pomogło
+

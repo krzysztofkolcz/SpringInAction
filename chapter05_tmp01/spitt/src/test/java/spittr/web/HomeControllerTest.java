@@ -12,11 +12,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import spittr.web.HomeController;
-import spittr.web.SpittleController;
-import spittr.data.SpittleRepository;
-import spittr.data.SpitterRepository;
-import spittr.Spittle;
-import spittr.Spitter;
 
 import org.springframework.web.servlet.view.InternalResourceView;
 
