@@ -38,3 +38,8 @@ mvn test
 error: package spittr.data does not exist
 Za dużo skopiowałem z chapter05, usunięcie importów z nieistniejącymi jeszcze pakietami pomogło
 
+dodanie: 
+spittr.data.SpittleRepository.java
+spittr.web.SpittleController.java
+spittr.Spittle.java
+
