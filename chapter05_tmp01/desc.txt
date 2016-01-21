@@ -30,4 +30,6 @@ http://websystique.com/springmvc/spring-4-mvc-and-hibernate4-integration-example
     sekcja <build>
 
 
-
+mvn test
+error: annotations are not supported in -source 1.3
+muszę dodać do pom.xml plugin maven-compile-plugin z wersją javy 1.8
