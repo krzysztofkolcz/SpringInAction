@@ -58,3 +58,5 @@ HelloWorld - działa ;)
 http://localhost:8080/Spitt/spittles
 error - nie jest interpretowane jsp!!!
 wow, to był bardzo trudny błąd - nie zauważyłem, pliku web.xml wygenerowanego przez mvn archetype:generate w src/main/webapp/WEB-INF/web.xml
+
+do str. 156
