@@ -43,3 +43,18 @@ spittr.data.SpittleRepository.java
 spittr.web.SpittleController.java
 spittr.Spittle.java
 
+mvn package 
+Nie wiem, czemu tworzy jar zamiast war???
+ok, już wiem - element 
+    <packaging>war</packaging>
+w pom.xml
+
+mvn compile war:war
+Utworzenie wara.
+
+http://localhost:8080/Spitt/
+HelloWorld - działa ;)
+
+http://localhost:8080/Spitt/spittles
+error - nie jest interpretowane jsp!!!
+wow, to był bardzo trudny błąd - nie zauważyłem, pliku web.xml wygenerowanego przez mvn archetype:generate w src/main/webapp/WEB-INF/web.xml
