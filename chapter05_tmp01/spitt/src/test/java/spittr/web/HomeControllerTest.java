@@ -14,7 +14,9 @@ import org.junit.runner.RunWith;
 import spittr.web.HomeController;
 import spittr.web.SpittleController;
 import spittr.Spittle;
+import spittr.Spitter;
 import spittr.data.SpittleRepository;
+import spittr.data.SpitterRepository;
 
 import org.springframework.web.servlet.view.InternalResourceView;
 
