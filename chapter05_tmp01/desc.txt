@@ -61,4 +61,7 @@ wow, to był bardzo trudny błąd - nie zauważyłem, pliku web.xml wygenerowane
 
 do str. 156
 
-
+ttp://websystique.com/springmvc/spring-4-mvc-and-hibernate4-integration-example-using-annotations/
+dodanie zależności do pom.xml
+dodanie konfiguracji hibernatea
+dodanie message source

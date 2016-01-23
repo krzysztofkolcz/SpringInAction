@@ -17,7 +17,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-		resolver.setViewClass(JstlView.class);
+        resolver.setViewClass(JstlView.class);
         resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".jsp");
         resolver.setExposeContextBeansAsAttributes(true);
@@ -27,5 +27,12 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
+    }
+
+    @Brean
+    public MessageSource messageSource(){
+        ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
+        messageSource.setBasename("messages");
+        return messageSource;
     }
 }
