@@ -43,3 +43,5 @@ spittr.data.SpittleRepository.java
 spittr.web.SpittleController.java
 spittr.Spittle.java
 
+mvn test - ok
+
