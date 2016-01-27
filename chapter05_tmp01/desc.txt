@@ -43,6 +43,7 @@ spittr.data.SpittleRepository.java
 spittr.web.SpittleController.java
 spittr.Spittle.java
 
+mvn test - ok
 mvn package 
 Nie wiem, czemu tworzy jar zamiast war???
 ok, już wiem - element 
