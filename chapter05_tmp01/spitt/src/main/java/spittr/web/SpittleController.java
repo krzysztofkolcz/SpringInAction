@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.ui.Model;
-import spittr.Spittle;
+import spittr.model.Spittle;
 import spittr.data.SpittleRepository;
 
 @Controller

@@ -1,28 +1,28 @@
 package spittr.data;
-
 import org.springframework.stereotype.Repository;
-
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
-import spittr.Spittle;
+import spittr.model.Spittle;
+import spittr.model.Spitter;
+import spittr.dao.SpittleDao;
 
-@Repository
+@Service("SpittleRepository")
+@Transactional
 public class SpittleRepositoryImpl implements SpittleRepository {
+
+    @Autowired 
+    private SpittleDao spittleDao;
+
     @Override
     public List<Spittle> findSpittles(long max, int count){
-        return createSpittleList(count);
-    }
-
-    private List<Spittle> createSpittleList(int count) {
-        List<Spittle> spittles = new ArrayList<Spittle>();
-        for (int i=0; i < count; i++) {
-            spittles.add(new Spittle("Spittle " + i, new Date(),12.513,13.353));
-        }
-        return spittles;
+        return spittleDao.findAllSpittles();
     }
 
     public Spittle findOne(long spittleId){
-        return new Spittle("Spittle ", new Date(),12.124,14.35423);
+        return spittleDao.findById(spittleId);
     }
 }

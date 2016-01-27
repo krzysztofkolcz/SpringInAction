@@ -26,7 +26,7 @@ public class HibernateConfiguration {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan(new String[] { "spittr.config" });
+        sessionFactory.setPackagesToScan(new String[] { "spittr.model" });
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
      }

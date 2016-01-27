@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.validation.Valid;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ObjectError;
-import spittr.Spitter;
+import spittr.model.Spitter;
 import spittr.data.SpitterRepository;
 
 @Controller

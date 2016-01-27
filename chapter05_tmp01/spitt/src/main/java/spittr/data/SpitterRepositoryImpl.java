@@ -1,24 +1,29 @@
 package spittr.data;
-
 import org.springframework.stereotype.Repository;
-
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
-import spittr.Spittle;
-import spittr.Spitter;
+import spittr.model.Spittle;
+import spittr.model.Spitter;
+import spittr.dao.SpitterDao;
 
-@Repository
+@Service("spitterRepository")
+@Transactional
 public class SpitterRepositoryImpl implements SpitterRepository {
+    @Autowired
+    private SpitterDao spitterDao;
 
     @Override
     public Spitter save(Spitter spitter){
-        Spitter saved = new Spitter(24L, "jbauer", "24hours", "Jack", "Bauer");
-        return saved;
+        spitterDao.saveSpitter(spitter);
+        return spitter;
     }
     @Override
     public Spitter findByUsername(String username){
-        Spitter spitter = new Spitter(24L, "jbauer", "24hours", "Jack", "Bauer");
+        Spitter spitter = spitterDao.findSpitterByUsername(username);
         return spitter;
     }
 }

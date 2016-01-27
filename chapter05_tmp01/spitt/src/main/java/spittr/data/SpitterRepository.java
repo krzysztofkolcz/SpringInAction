@@ -1,6 +1,6 @@
 package spittr.data;
 import java.util.List;
-import spittr.Spitter;
+import spittr.model.Spitter;
 
 public interface SpitterRepository {
     Spitter save(Spitter spitter);
