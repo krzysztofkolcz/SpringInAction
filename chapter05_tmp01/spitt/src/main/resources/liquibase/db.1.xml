@@ -6,7 +6,7 @@ xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
   <changeSet id="1" author="kkolcz">
-    <createTable tableName="spitter">
+    <createTable tableName="Spitter">
       <column name="id" type="int">
         <constraints primaryKey="true" nullable="false"/>
       </column>
@@ -24,7 +24,7 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
       </column>
     </createTable>
 
-    <createTable tableName="spittle">
+    <createTable tableName="Spittle">
       <column name="id" type="int">
         <constraints primaryKey="true" nullable="false"/>
       </column>
@@ -35,6 +35,10 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
         <constraints nullable="false"/>
       </column>
     </createTable>
+    <rollback>
+      <dropTable tableName="Spitter"/>
+      <dropTable tableName="Spittle"/>
+    </rollback>
   </changeSet>
 
 </databaseChangeLog>

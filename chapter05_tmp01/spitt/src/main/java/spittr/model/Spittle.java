@@ -3,6 +3,21 @@ import java.util.Date;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+ 
+import org.hibernate.annotations.Type;
+import org.hibernate.validator.constraints.NotEmpty;
+import org.joda.time.LocalDate;
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 @Table(name="Spittle")
 public class Spittle {
@@ -23,9 +38,6 @@ public class Spittle {
     private Double latitude;
     private Double longitude;
 
-    public Spittle(String message, Date time) {
-        this(message, time, null, null);
-    }
 
     public Spittle( String message, Date time ) {
         this.id = null;

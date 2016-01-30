@@ -73,4 +73,20 @@ http://www.liquibase.org/quickstart.html
 pobranie:
 http://www.liquibase.org/download/
 
+Komenda liquibase:
+./liquibase --driver=com.mysql.jdbc.Driver --classpath=/home/krzysztof/.m2 --changeLogFile=/home/krzysztof/IdeaProjects/SpringInAction/chapter05_tmp01/spitt/src/main/resources/liquibase/changelog.xml --url="jdbc:mysql://localhost/chapter05_tmp01" --username=chapter05_tmp01 --password=chapter05_tmp01 migrate
+
+Unexpected error running Liquibase: java.lang.RuntimeException: Cannot find database driver: com.mysql.jdbc.Driver
+
+
+plik propertiesów:
+1 driver=com.mysql.jdbc.Driver 
+2 classpath=/home/krzysztof/.m2/repository/mysql/mysql-connector-java/5.1.31/mysql-connector-java-5.1.31.jar
+3 changeLogFile=/home/krzysztof/IdeaProjects/SpringInAction/chapter05_tmp01/spitt/src/main/resources/liquibase/changelog.xml 
+4 url="jdbc:mysql://localhost/chapter05_tmp01" 
+5 username=chapter05_tmp01 
+6 password=chapter05_tmp01 migrate
+
+odpalenie komendy:
+java -jar liquibase.jar migrate
 
