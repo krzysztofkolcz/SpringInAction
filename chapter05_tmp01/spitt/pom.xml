@@ -49,6 +49,7 @@
           </configuration>
         </plugin>
       </plugins>
+
     </pluginManagement>
     <finalName>Spitt</finalName>
   </build>

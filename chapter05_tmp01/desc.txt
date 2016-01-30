@@ -66,3 +66,11 @@ ttp://websystique.com/springmvc/spring-4-mvc-and-hibernate4-integration-example-
 dodanie zależności do pom.xml
 dodanie konfiguracji hibernatea
 dodanie message source
+
+liquibase:
+http://www.liquibase.org/quickstart.html
+
+pobranie:
+http://www.liquibase.org/download/
+
+

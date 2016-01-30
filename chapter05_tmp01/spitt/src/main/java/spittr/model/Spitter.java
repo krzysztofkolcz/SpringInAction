@@ -4,6 +4,8 @@ import javax.validation.constraints.Size;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+@Entity
+@Table(name="Spitter")
 public class Spitter {
 
     public Spitter(){
@@ -23,6 +25,8 @@ public class Spitter {
         this.lastName = lastName;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
