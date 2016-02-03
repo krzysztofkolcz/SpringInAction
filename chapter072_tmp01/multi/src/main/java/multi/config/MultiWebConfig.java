@@ -13,7 +13,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "multi.controller")
+@ComponentScan(basePackages = "multi")
 public class MultiWebConfig extends WebMvcConfigurerAdapter {
  
     @Bean(name = "multipartResolver")
