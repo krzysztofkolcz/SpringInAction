@@ -11,11 +11,13 @@ public class MultiWebAppInitializer extends AbstractAnnotationConfigDispatcherSe
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[] { RootConfig.class };
+        return new Class<?>[] { MultiWebConfig.class };
+        /* return new Class<?>[] { RootConfig.class }; */
     }
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class<?>[] { MultiWebConfig.class };
+        /* return new Class<?>[] { MultiWebConfig.class }; */
+        return null;
     }
 
     @Override
