@@ -1,9 +1,10 @@
-package multipart.config;
+package multi.config;
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 import javax.servlet.MultipartConfigElement;
 import javax.servlet.ServletRegistration;
 
-public class MultipartWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class MultiWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
     @Override
     protected String[] getServletMappings() {
         return new String[] { "/" };
@@ -11,13 +12,12 @@ public class MultipartWebAppInitializer extends AbstractAnnotationConfigDispatch
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[] { RootConfig.class };
+        return new Class<?>[] { WebConfig.class };
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class<?>[] { WebConfig.class };
-        /* return null; */
+        return null;
     }
 
     @Override
