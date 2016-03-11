@@ -11,13 +11,13 @@ public class MultipartWebAppInitializer extends AbstractAnnotationConfigDispatch
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        /* return new Class<?>[] { RootConfig.class }; */
-        return new Class<?>[] { WebConfig.class };
+        return new Class<?>[] { RootConfig.class };
+        //return new Class<?>[] { WebConfig.class };
     }
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        //return new Class<?>[] { WebConfig.class };
-        return null;
+        return new Class<?>[] { WebConfig.class };
+        /* return null; */
     }
 
     @Override

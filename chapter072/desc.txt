@@ -1,2 +1,13 @@
 Na razie przerabiam z 
 http://websystique.com/springmvc/spring-mvc-4-file-upload-example-using-multipartconfigelement/
+
+Muszę spróbować zrobić kompilację z palca.
+Tutaj przykład z https://github.com/danielnorberg/auto-matter/issues/17:
+javac example/src/main/java/io/norberg/automatter/example/*.java \
+> -d example/target/classes \
+> -classpath example/target/classes:processor/target/classes:annotation/target/classes:$HOME/.m2/repository/com/squareup/javawriter/2.4.0/javawriter-2.4.0.jar:$HOME/.m2/repository/org/modeshape/modeshape-common/3.8.1.Final/modeshape-common-3.8.1.Final.jar:jackson/target/classes:$HOME/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.4.0/jackson-databind-2.4.0.jar:$HOME/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.4.0/jackson-annotations-2.4.0.jar:$HOME/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.4.0/jackson-core-2.4.0.jar:gson/target/classes:$HOME/.m2/repository/com/google/code/gson/gson/2.3/gson-2.3.jar:$HOME/.m2/repository/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar:$HOME/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar: \
+> -sourcepath example/src/main/java:example/target/generated-sources/annotations: \
+> -s example/target/generated-sources/annotations \
+> -g -nowarn \
+> -target 1.6 -source 1.6 \
+> -encoding UTF-8
