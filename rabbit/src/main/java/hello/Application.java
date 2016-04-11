@@ -22,11 +22,8 @@ public class Application implements CommandLineRunner {
 
     final static String queueName = "spring-boot";
 
-    @Autowired
-    AnnotationConfigApplicationContext context;
-
-    @Autowired
-    RabbitTemplate rabbitTemplate;
+    @Autowired AnnotationConfigApplicationContext context;
+    @Autowired RabbitTemplate rabbitTemplate;
 
     @Bean
     Queue queue() {
