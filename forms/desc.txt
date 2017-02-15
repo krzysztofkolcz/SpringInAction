@@ -1,0 +1,14 @@
+TODO:
+commandObject
+action
+
+@RequestParam
+@ModelAttribute
+
+@PathVariable:
+
+
+@RequestMapping(path = "/{day}", method = RequestMethod.GET)
+public Map<String, Appointment> getForDay(@PathVariable @DateTimeFormat(iso=ISO.DATE) Date day, Model model) {
+    return appointmentBook.getAppointmentsForDay(day);
+}
